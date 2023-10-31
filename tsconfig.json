@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es6",
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "noEmit": false,
+    "types": ["cypress-file-upload", "cypress-iframe","node","cypress"],
+    "resolveJsonModule": true
+  },
+  "exclude": [
+    "node_modules",
+    "./api/features/stepdefs/**/*.steps.ts",
+    "./api/features/*.feature"
+  ],
+  "include": [
+    "./node_modules/cypress",
+      "./tests/**/*.ts"
+  ]
+}

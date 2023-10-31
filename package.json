@@ -1,0 +1,60 @@
+{
+  "name": "aptekiua",
+  "version": "1.0.0",
+  "description": "**Short description**",
+  "main": "index.js",
+  "scripts": {
+    "delete_reports": "sudo rm -rf 'reports' 'mochawesome-report' 'report.json'|| true",
+    "cy.open": "cypress open",
+    "dockerRegression": "sudo docker run --rm  -v $PWD:/e2e -w /e2e cypress/included:9.7.0 --spec \"tests/test _case_cucumber/**/*\" --headless  -b chrome --config video=false,screenshotOnRunFailure=false\n "
+  },
+  "keywords": [],
+  "license": "ISC",
+  "dependencies": {
+    "@adyen/api-library": "^6.0.1",
+    "@cucumber/cucumber": "^7.0.0-rc.0",
+    "@cypress/webpack-preprocessor": "^4.0.2",
+    "@types/node": "^14.14.37",
+    "aws-sdk": "^2.1074.0",
+    "axios": "^0.21.0",
+    "chai-json-schema": "^1.5.1",
+    "cucumber": "^7.0.0-rc.0",
+    "cypress-cucumber-preprocessor": "^4.0.0",
+    "cypress-upload-file-post-form": "^1.1.0",
+    "dotenv": "^8.2.0",
+    "emailjs": "^3.7.0",
+    "ip": "^1.1.8",
+    "jsonpath": "^1.0.2",
+    "nodemailer": "^6.7.2",
+    "tar": "^6.1.11",
+    "ts-jest": "^26.4.3",
+    "typescript": "^4.2.4",
+    "uuid-v4": "^0.1.0",
+    "webpack": "^4.28.2"
+  },
+  "devDependencies": {
+    "@4tw/cypress-drag-drop": "^2.1.0",
+    "cypress": "^13.4.0",
+    "cypress-file-upload": "^5.0.0",
+    "cypress-iframe": "^1.0.1",
+    "cypress-mochawesome-reporter": "^2.3.0",
+    "cypress-multi-reporters": "^1.5.0",
+    "mocha": "^9.2.0",
+    "mochawesome": "^6.3.1",
+    "mochawesome-merge": "^4.2.1",
+    "mochawesome-report-generator": "^5.2.0",
+    "ts-loader": "^8.0.11",
+    "typedoc": "^0.20.30"
+  },
+  "cypress-cucumber-preprocessor": {
+    "step_definitions": "tests/function_for_cucumber"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Maksym-Bov/aptekiua"
+  },
+  "homepage": "https://github.com/Maksym-Bov/aptekiua"
+}
